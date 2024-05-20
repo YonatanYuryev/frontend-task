@@ -1,0 +1,90 @@
+.Dropdown {
+  position: relative;
+  width: 135px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.ValueWrapper {
+  width: 100%;
+  padding: 10px 7px 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Label {
+  flex: 1;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.DropdownList {
+  list-style: none;
+  width: 100%;
+  position: absolute;
+  top: 42px;
+  left: 0;
+  height: fit-content;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: grid;
+  row-gap: 0.5vh;
+  z-index: 20;
+  background: #fff;
+  box-shadow: 0 1px 1px var(--dropdown-bgc-shadow);
+  animation: DropdownListAnimation 300ms ease-in-out;
+  transform-origin: top center;
+  padding: 3px;
+}
+
+.DropdownItem {
+  cursor: pointer;
+  height: 40px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+  }
+  &:active {
+    background: #2d74ff;
+    color: #fff;
+  }
+}
+
+.DropdownArrow {
+  transition: transform 0.3s;
+  transform: rotate(0deg);
+}
+
+.DropdownArrow.opened {
+  transition: transform 0.3s;
+  transform: rotate(180deg);
+}
+
+
+@keyframes DropdownListAnimation {
+  0% {
+    transform: rotateX(-90deg);
+    opacity: 0.2;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}

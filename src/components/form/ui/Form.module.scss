@@ -1,0 +1,13 @@
+.Form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  list-style: none;
+}
+
+.Controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}

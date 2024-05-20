@@ -1,0 +1,61 @@
+.Output {
+  width: 100%;
+  height: 400px;
+  overflow: auto;
+}
+
+.OutputList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.OutputItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10%;
+}
+
+.OutputLabel {
+  font-size: 14px;
+  font-weight: 500;
+  width: 15%;
+}
+
+.OutputValuesBlock {
+  padding: 2px;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  gap: 3px;
+  width: 500px;
+  height: 110px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.OutputLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  height: fit-content;
+  width: fit-content;
+  padding: 5px 8px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: lightgrey;
+  transition: all .2s ease-in-out;
+  &:hover {
+    background-color: grey;
+  }
+}
+
+.RemoveButton {
+  cursor: pointer;
+  &:hover {
+    color: #fff;
+  }
+}
