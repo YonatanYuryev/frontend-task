@@ -6,11 +6,11 @@ interface FormInputProps {
   className?: string;
   inputValue: string;
   onChangeInputValue: (e: ChangeEvent<HTMLInputElement>) => void;
+  startsWithSlash: boolean;
 }
 
 const FormInput: FC<FormInputProps> = (props) => {
-  const { className, inputValue, onChangeInputValue } = props;
-  const startsWithSlash = inputValue.startsWith('/');
+  const { className, inputValue, onChangeInputValue, startsWithSlash } = props;
   return (
     <label className={[cls.FormInput, className].join(' ')} htmlFor="input">
         <Input 

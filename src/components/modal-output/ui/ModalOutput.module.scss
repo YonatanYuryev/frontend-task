@@ -1,0 +1,43 @@
+.ModalOutput {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.OutputList {
+  list-style: none;
+  padding: 0;
+}
+
+.OutputItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.OutputLabel {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.OutputValuesBlock {
+  overflow-y: auto; 
+  max-width: 300px; 
+}
+
+.OutputValuesList {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.OutputValue {
+  background-color: lightgray;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  display: inline-block;
+  white-space: nowrap;
+}

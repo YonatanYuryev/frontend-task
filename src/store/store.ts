@@ -1,13 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import modalSlice from "./features/modal/modalSlice";
 import dropdownSlice from "./features/dropdown/dropdownSlice";
-import outputSlice from "./features/output/outputSlice";
+import formSlice from "./features/form/formSlice";
 
 export const store = configureStore({
   reducer: {
     dropdown: dropdownSlice,
     modal: modalSlice,
-    output: outputSlice,
+    form: formSlice,
   },
 });
 

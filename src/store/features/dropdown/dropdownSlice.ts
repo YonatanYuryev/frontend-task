@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { InitialState } from "./types";
 
 enum DropdownValues {
@@ -38,11 +38,15 @@ export const dropdownSlice = createSlice({
   name: 'dropdown',
   initialState,
   reducers: {
-    showDropdown(state, action) {
+    showDropdown(state, action: PayloadAction<boolean>) {
       state.isOpen = action.payload;
     },
-    onClickDropdownItem(state, action) {
-      state.currentValue = action.payload;
+    onClickDropdownItem(state, action: PayloadAction<string>) {
+      return {
+        ...state, 
+        currentValue: action.payload, 
+        isOpen: !state.isOpen
+      }
     }
   },
 })
