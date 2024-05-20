@@ -39,10 +39,10 @@ export const dropdownSlice = createSlice({
   initialState,
   reducers: {
     showDropdown(state, action) {
-      state = { ...state, isOpen: action.payload };
+      state.isOpen = action.payload;
     },
     onClickDropdownItem(state, action) {
-      state = { ...state, currentValue: action.payload };
+      state.currentValue = action.payload;
     }
   },
 })

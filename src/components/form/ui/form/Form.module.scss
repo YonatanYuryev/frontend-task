@@ -10,15 +10,3 @@
   justify-content: space-between;
   gap: 30px;
 }
-
-
-.inCorrectInput {
-  position: relative;
-}
-
-.inCorrectInput::after {
-  position: absolute;
-  top: 100%;
-  color: #f02c2c;
-  content: 'URLs must start with "/"';
-}
